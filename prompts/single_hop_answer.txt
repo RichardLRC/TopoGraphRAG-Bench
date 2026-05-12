@@ -1,0 +1,15 @@
+Answer the following question using ONLY the provided content.
+
+## Content (from {modality}, page {page_id}, layout {layout_id}):
+{content}
+
+## Question:
+{question}
+
+## Rules:
+- The answer MUST come directly from the content above
+- Be concise: answer with the shortest correct response
+- If the content does not contain enough information to answer, respond with {{"answer": null, "answer_type": null}}
+
+Return JSON only:
+{{"answer": "<your answer>", "answer_type": "entity|number|percentage|date|phrase"}}

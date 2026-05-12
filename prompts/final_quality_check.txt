@@ -1,0 +1,23 @@
+You are checking a multi-hop question for entity-level issues. Score the following (0-10).
+
+## Multi-hop question:
+{question}
+
+## Final answer: {answer}
+## Bridge entity (hidden from the reader): {bridge_entity}
+## Hop path: {hop_path}
+
+## Reasoning trace:
+Hop 1: {hop1_question} → {hop1_answer}
+Hop 2: {hop2_question} → {hop2_answer}
+
+## Score each (0-10):
+
+1. **no_bridge_name_in_question**: Does the question avoid directly stating the bridge entity's name? (10 = name never appears in the question; 0 = name is explicitly written in the question)
+
+2. **answer_not_bridge**: Is the final answer different from the bridge entity? (10 = completely different; 0 = the answer IS the bridge entity or contains it as the main content)
+
+3. **semantic_coherence**: Do the two hops form a logically meaningful reasoning chain, not just two unrelated facts that happen to share a word? (10 = naturally connected; 0 = completely unrelated)
+
+Return JSON only:
+{{"no_bridge_name_in_question": <0-10>, "answer_not_bridge": <0-10>, "semantic_coherence": <0-10>}}

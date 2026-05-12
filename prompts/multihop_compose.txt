@@ -1,0 +1,40 @@
+Combine the following two single-hop questions into one natural multi-hop question.
+
+## Hop 1 ({hop1_modality}, page {hop1_page}):
+Question: {hop1_question}
+Answer: {hop1_answer}
+
+## Hop 2 ({hop2_modality}, page {hop2_page}):
+Question: {hop2_question}
+Answer: {hop2_answer}
+
+## Bridge entity: "{bridge_entity}"
+Hop 1's answer leads to Hop 2: the answer "{hop1_answer}" is the entity "{bridge_entity}" mentioned in Hop 2's question.
+
+## Your task:
+Create a single natural multi-hop question by turning Hop 1 into a descriptive clause that identifies the bridge entity WITHOUT naming it, and Hop 2 into the main question.
+
+**Structure**: Use Hop 1 as a subordinate/relative clause, and Hop 2 as the main question body:
+- "For the [Hop1 indirect description], [Hop2 question about its attribute]?"
+- "What is the [attribute] of the [Hop1 indirect description]?"
+- "According to the report, the [Hop1 indirect description] had what [attribute]?"
+
+**Bad example** (two questions joined by "and"):
+"Which group had the highest rate in 2015, and what was their income?"
+
+**Good example** (Hop1 becomes a descriptive clause):
+"For the group with the highest rate in 2015, what was their median household income?"
+
+## Rules:
+1. Do NOT mention "{bridge_entity}" by name
+2. Hop 1 must become a descriptive clause, NOT a separate question
+3. The result must read as ONE single question, not two questions joined by "and"
+4. Keep it concise and natural
+5. Do NOT reference any page numbers, layout IDs, figure numbers, or table numbers (e.g., "page 19", "Figure 3", "Table 2"). The question must be self-contained without document structure references
+
+Return JSON only:
+{{
+  "composed_question": "<the multi-hop question>",
+  "final_answer": "<Hop 2's answer>",
+  "indirect_description": "<the phrase you used to replace the bridge entity>"
+}}

@@ -1,0 +1,15 @@
+Rate the quality of this QA pair on a scale of 0-10.
+
+## Content (from {modality}):
+{content}
+
+## Question: {question}
+## Answer: {answer}
+
+## Scoring dimensions:
+1. Correctness: Is the answer factually correct based on the content? (0-10)
+2. Clarity: Is the question clear and unambiguous? (0-10)
+3. Non-triviality: Is the question meaningful (not too obvious)? (0-10)
+
+Return JSON only:
+{{"score": <average 0-10>, "reason": "<brief explanation>"}}

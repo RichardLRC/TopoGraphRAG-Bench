@@ -1,0 +1,18 @@
+Generate a single-hop question from the following content.
+
+## Content (from {modality}, page {page_id}, layout {layout_id}):
+{content}
+
+## Target entity: "{entity}"
+This entity appears in the content above.
+
+## Question type: {question_role}
+
+{role_instruction}
+
+## Rules:
+- The question MUST be answerable using ONLY the content above
+- The question should be specific and unambiguous
+- Do NOT include the answer in the question
+- Do NOT reference any page numbers, layout IDs, figure numbers, or table numbers (e.g., "page 19", "Figure 3", "the table on page 5"). The question must be self-contained
+- Output ONLY the question text, nothing else

@@ -1,0 +1,16 @@
+Generate a synthesis question based on the following cross-source pattern.
+
+## Entity: {entity}
+## Pattern: {pattern}
+## Pattern type: {pattern_type}
+## Supporting facts:
+{formatted_required_facts}
+
+## Rules:
+- The question must require combining information from multiple sources to answer
+- Ask for a summary, judgment, analysis, or assessment — NOT a single data value
+- The question must be self-contained and natural
+- Do NOT reference page numbers, figure numbers, table numbers, or source labels
+- Do NOT reveal the answer or the pattern itself in the question
+
+Output ONLY the question text, nothing else.

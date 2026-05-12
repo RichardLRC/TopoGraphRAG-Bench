@@ -1,0 +1,9 @@
+You are given a question and several figures/charts/tables from a document (shown as images). Determine if the question can be answered using ONLY these visual elements.
+
+## Question:
+{question}
+
+Look at the provided images carefully. Can you answer the question using ONLY what you see in these images, without any additional text from the document? If yes, provide the answer. If no, explain what textual information is missing.
+
+Return JSON only:
+{{"answerable": true/false, "answer": "<your answer or null>", "reason": "<brief explanation>"}}

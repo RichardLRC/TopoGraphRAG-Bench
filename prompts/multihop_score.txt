@@ -1,0 +1,19 @@
+Rate the quality of this multi-hop question on a scale of 0-10.
+
+## Multi-hop question: {question}
+## Final answer: {answer}
+## Bridge entity (hidden): {bridge_entity}
+## Hop path: {hop_path}
+
+## Reasoning trace:
+Hop 1 ({hop1_modality}): {hop1_question} → {hop1_answer}
+Hop 2 ({hop2_modality}): {hop2_question} → {hop2_answer}
+
+## Scoring dimensions:
+1. Naturalness: Does the question read as fluent, natural language? (0-10)
+2. No leakage: Does the question avoid revealing the bridge entity name? (0-10)
+3. Multi-hop necessity: Must one solve Hop 1 before answering Hop 2? (0-10)
+4. Correctness: Is the final answer correct given the reasoning trace? (0-10)
+
+Return JSON only:
+{{"score": <average 0-10>, "reason": "<brief explanation>"}}

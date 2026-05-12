@@ -1,0 +1,10 @@
+Do the following two entity names refer to the EXACT same thing?
+
+Entity A: "{entity_a}"
+Entity B: "{entity_b}"
+
+Answer YES only if they are the same entity — just written differently (different wording, abbreviations, or phrasing).
+Answer NO if they are related but distinct (e.g. different categories, different levels, parent vs child, opposite meanings).
+
+Return JSON only:
+{{"match": true/false}}

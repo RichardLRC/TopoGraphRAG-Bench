@@ -1,0 +1,21 @@
+Rate the quality of this synthesis question on each dimension (0-10).
+
+## Question:
+{question}
+
+## Synthesis Conclusion:
+{conclusion}
+
+## Evidence Points:
+{evidence}
+
+## Score each (0-10):
+
+1. **question_clarity**: Is the question clear, natural, and self-contained? (10 = perfectly clear; 0 = incomprehensible)
+
+2. **conclusion_quality**: Is the conclusion well-supported by the evidence, specific (cites data), and insightful? (10 = excellent insight with data; 0 = vague or unsupported)
+
+3. **multi_source_necessity**: Does answering truly require combining multiple evidence points? (10 = impossible without all sources; 0 = one source suffices)
+
+Return JSON only:
+{{"question_clarity": <0-10>, "conclusion_quality": <0-10>, "multi_source_necessity": <0-10>}}

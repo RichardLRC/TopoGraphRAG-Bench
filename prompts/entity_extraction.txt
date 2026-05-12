@@ -1,0 +1,27 @@
+Extract all named entities from the following document content.
+
+## Content (from {modality}, page {page_id}, layout {layout_id}):
+{content}
+
+## Instructions:
+Extract every named entity that appears in this content. Include:
+- People names (person)
+- Organization/institution names (org)
+- Group/category names — any named group, subgroup, or category that could appear as a label in a chart or table (group)
+- Place names (place)
+- Specific dates or years (date)
+- Specific percentages or numerical values that describe a particular entity (number)
+- Named metrics/indicators, e.g. "unemployment rate", "GDP growth" (metric)
+
+Rules:
+- Only extract entities explicitly mentioned in the content
+- For numbers/percentages: only include those tied to a specific entity (e.g. "Hispanic: 40%"), not standalone numbers
+- When the text compares or lists multiple categories with data (e.g. "A had +20, B had +9, C had +11"), extract EACH category as a separate entity
+- Use short, canonical label forms (e.g. "some college" not "people who had completed some college")
+- Do NOT include generic terms like "figure", "table", "chart", "page"
+
+Return JSON only:
+[
+  {{"name": "<entity>", "type": "person|org|group|place|date|number|metric"}},
+  ...
+]

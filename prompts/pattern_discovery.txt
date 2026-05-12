@@ -1,0 +1,29 @@
+You are given multiple facts about "{entity}" from different pages and modalities of the same document.
+
+## Facts:
+{formatted_facts}
+
+## Task:
+Find a pattern or insight that can ONLY be discovered by combining 3 or more of these facts together. No single fact alone should be sufficient to arrive at this insight.
+
+## Pattern types to look for:
+- **trend**: An overall trajectory across multiple metrics or time periods
+- **contradiction**: A tension or gap between different aspects of the data
+- **causal**: A cause-effect relationship implied by combining multiple data points
+- **comparison**: A meaningful contrast between subgroups visible only across multiple sources
+- **panorama**: A complete picture that requires multiple dimensions of data
+
+## Rules:
+- The pattern must require AT LEAST 3 facts
+- At least 2 different modalities should be involved among the required facts
+- Explain clearly WHY a single fact is not sufficient
+- If no meaningful cross-source pattern exists, set "valid": false
+
+Return JSON only:
+{{
+  "pattern": "<description of the cross-source pattern>",
+  "pattern_type": "trend|contradiction|causal|comparison|panorama",
+  "required_fact_ids": ["f1", "f3", "f5"],
+  "why_multi_source": "<why single fact is not enough>",
+  "valid": true/false
+}}

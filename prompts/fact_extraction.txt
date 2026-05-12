@@ -1,0 +1,13 @@
+Extract one specific fact about the entity "{entity}" from the following content.
+
+## Content (from {modality}, page {page_id}):
+{content}
+
+## Rules:
+- The fact MUST include specific data (numbers, percentages, years, etc.)
+- Express in ONE sentence
+- Only extract information explicitly present in the content, do not infer
+- If the content does not contain any specific fact about "{entity}", return null
+
+Return JSON only:
+{{"fact": "<one-sentence fact or null>", "data_points": ["<specific numbers/percentages mentioned>"]}}

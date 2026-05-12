@@ -1,0 +1,12 @@
+You are given a question and a piece of evidence. Determine if the question can be answered using ONLY this evidence.
+
+## Question:
+{question}
+
+## Evidence ({modality}, page {page_id}):
+{content}
+
+Can you answer the question using ONLY the evidence above? If yes, provide the answer. If no, explain what information is missing.
+
+Return JSON only:
+{{"answerable": true/false, "answer": "<your answer or null>", "reason": "<brief explanation>"}}

@@ -1,0 +1,19 @@
+Generate a structured answer for the following synthesis question.
+
+## Question: {question}
+
+## Available evidence:
+{formatted_evidence}
+
+## Rules:
+- The synthesis_conclusion must be 1-3 sentences
+- It must reference specific data from the evidence (exact numbers)
+- It must draw a conclusion that requires ALL cited evidence points
+- Do NOT reference source labels like "Fact 1" or "Source 2" — use natural language
+- The conclusion cannot be derived from any single evidence point alone
+
+Return JSON only:
+{{
+  "synthesis_conclusion": "<1-3 sentence conclusion citing specific data>",
+  "key_data_cited": ["<list of specific numbers/percentages used in the conclusion>"]
+}}
