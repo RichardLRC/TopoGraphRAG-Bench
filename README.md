@@ -165,15 +165,7 @@ post-hoc labels.
 - **Evidence per question**: 1 (single-hop) · 2 (bridge-chain) · 3.2 mean (synthesis).
 - **Data hosting**: All artifacts on [HuggingFace](https://huggingface.co/datasets/diandianone123/topographrag-bench).
 
-## Citation
 
-```bibtex
-@inproceedings{topographrag2025,
-  title  = {TopoGraphRAG-Bench: ...},
-  author = {...},
-  year   = {2025},
-}
-```
 
 *(BibTeX will be finalized upon publication.)*
 
