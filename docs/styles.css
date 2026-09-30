@@ -39,6 +39,9 @@ h2 { margin: 0 0 22px; text-align: center; font-size: 30px; font-weight: 650; le
 .abstract p { margin: 0; color: #505968; text-align: left; }
 .small-caps { font-variant: small-caps; }
 .overview { border-top: 1px solid var(--line); }
+.construction, .evaluation { border-top: 1px solid var(--line); }
+.section-copy { max-width: 850px; margin: 0 auto; color: #505968; }
+.section-copy p { margin: 0; }
 .overview-copy { max-width: 850px; margin: 0 auto; color: #505968; }
 .overview-copy p { margin: 0 0 20px; }
 .overview-copy p:last-child { margin-bottom: 0; }

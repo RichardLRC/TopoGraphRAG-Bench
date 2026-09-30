@@ -11,7 +11,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://richardlrc.github.io/TopoGraphRAG-Bench/" />
     <link rel="canonical" href="https://richardlrc.github.io/TopoGraphRAG-Bench/" />
-    <link rel="stylesheet" href="styles.css?v=pipeline-teaser-1" />
+    <link rel="stylesheet" href="styles.css?v=construction-evaluation-1" />
     <script src="case-study.js?v=inline-case-1" defer></script>
   </head>
   <body>
@@ -65,6 +65,32 @@
             <figcaption>Domain distribution of the 201 documents. Slices show percentages; the legend reports document counts using the original MMDocIR domain labels.</figcaption>
           </figure>
         </div>
+      </section>
+
+      <section class="section construction" id="construction" aria-labelledby="construction-title">
+        <h2 id="construction-title">Construction</h2>
+        <div class="section-copy">
+          <p>We construct questions bottom-up from layout-grounded evidence units. Individual units support single-hop questions, shared entities connect units into bridge chains, and complementary evidence points support multi-source synthesis. Topology-specific counterfactual checks test shortcut resistance, modality necessity, and evidence necessity, followed by a stratified human audit.</p>
+        </div>
+      </section>
+
+      <section class="section evaluation" id="evaluation" aria-labelledby="evaluation-title">
+        <h2 id="evaluation-title">Evaluation</h2>
+        <div class="section-copy">
+          <p>We evaluate six systems spanning text-only GraphRAG, page-level visual retrieval, and multimodal GraphRAG using retrieval, generation, and topology-aware metrics. Multimodal GraphRAG achieves the strongest overall performance, while cross-modal bridge chains and multi-source synthesis remain challenging.</p>
+        </div>
+        <figure>
+          <a href="assets/capability-profile.png" target="_blank" rel="noopener noreferrer" aria-label="Open the capability profile at full resolution">
+            <img src="assets/capability-profile.png" width="2736" height="1024" loading="lazy" decoding="async" alt="Answer accuracy of six systems across single-hop, bridge-chain, and synthesis subsets, separated by textual and visual evidence. Multimodal GraphRAG systems show stronger performance on compositional visual subsets." />
+          </a>
+          <figcaption>Answer accuracy across reasoning topologies and evidence modalities. MM denotes subsets requiring figure or table evidence.</figcaption>
+        </figure>
+        <figure>
+          <a href="assets/bridge-chain-results.png" target="_blank" rel="noopener noreferrer" aria-label="Open the bridge-chain radar plot and metric tables at full resolution">
+            <img src="assets/bridge-chain-results.png" width="1090" height="472" loading="lazy" decoding="async" alt="Bridge-chain evaluation: a radar plot compares six systems on all nine ordered modality paths; three tables report answer accuracy, faithfulness, and step coverage for text-only, mixed, and visual-only bridge families." />
+          </a>
+          <figcaption>Bridge-chain performance by evidence path and modality family. Left: path-level answer accuracy. Right: answer accuracy, faithfulness, and step coverage.</figcaption>
+        </figure>
       </section>
 
       <section class="section case-study" id="case-study" aria-labelledby="case-study-title">
