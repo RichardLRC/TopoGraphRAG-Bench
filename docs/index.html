@@ -11,7 +11,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://richardlrc.github.io/TopoGraphRAG-Bench/" />
     <link rel="canonical" href="https://richardlrc.github.io/TopoGraphRAG-Bench/" />
-    <link rel="stylesheet" href="styles.css?v=overview-1" />
+    <link rel="stylesheet" href="styles.css?v=overview-construction-1" />
     <script src="case-study.js?v=inline-case-1" defer></script>
   </head>
   <body>
@@ -43,16 +43,28 @@
           <p>TopoGraphRAG-Bench evaluates layout-grounded multimodal evidence reasoning in GraphRAG. It contains 2,024 questions constructed from 201 long documents sampled from MMDocIR, spanning nine domains, including academic papers, legal documents, research reports, and financial reports. The documents average 45.5 pages and approximately 13,000 words, with evidence distributed across text, figures, tables, and page layouts.</p>
           <p>Questions are organized into three controlled reasoning topologies: single-hop retrieval (302 questions), bridge-chain reasoning (1,014), and multi-source synthesis (708). Cross-modal questions account for 38.2% of the benchmark, while 66.8% require figure or table evidence. Bridge-chain questions cover all nine ordered modality paths among text, figures, and tables. Each question includes a gold answer, page- and layout-grounded evidence references, and evidence-topology annotations that make the required evidence and its reasoning roles explicit.</p>
         </div>
-        <figure class="overview-statistics">
-          <a href="assets/dataset-statistics.png" target="_blank" rel="noopener noreferrer" aria-label="Open the dataset statistics and evidence topology table at full resolution">
-            <img src="assets/dataset-statistics.png" width="1117" height="710" loading="lazy" decoding="async" alt="Dataset statistics and fine-grained evidence topology: 201 documents, 2,024 questions, 302 single-hop questions, 1,014 bridge-chain questions, and 708 synthesis questions. The table also reports evidence distributions, all nine bridge paths, and synthesis evidence counts." />
+        <div class="overview-figures">
+          <figure class="overview-statistics">
+            <a href="assets/dataset-statistics.png" target="_blank" rel="noopener noreferrer" aria-label="Open the dataset statistics and evidence topology table at full resolution">
+              <img src="assets/dataset-statistics.png" width="1117" height="710" loading="lazy" decoding="async" alt="Dataset statistics and fine-grained evidence topology: 201 documents, 2,024 questions, 302 single-hop questions, 1,014 bridge-chain questions, and 708 synthesis questions. The table also reports evidence distributions, all nine bridge paths, and synthesis evidence counts." />
+            </a>
+          </figure>
+          <figure class="overview-domains">
+            <a href="assets/corpus-domains.png" target="_blank" rel="noopener noreferrer" aria-label="Open the document domain distribution at full resolution">
+              <img src="assets/corpus-domains.png" width="2220" height="1020" loading="lazy" decoding="async" alt="Distribution of 201 documents across nine domains: academic paper 45, laws 38, research report 33, guidebook 20, tutorial/workshop 14, brochure 14, government 14, financial report 13, and administration/industry file 10." />
+            </a>
+            <figcaption>Domain distribution of the 201 documents. Slices show percentages; the legend reports document counts using the original MMDocIR domain labels.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section construction" id="construction" aria-labelledby="construction-title">
+        <h2 id="construction-title">Construction</h2>
+        <figure>
+          <a href="assets/overview.png" target="_blank" rel="noopener noreferrer" aria-label="Open the benchmark construction pipeline at full resolution">
+            <img src="assets/overview.png" width="1455" height="737" loading="lazy" decoding="async" alt="Bottom-up construction of TopoGraphRAG-Bench with three controlled reasoning topologies and counterfactual validation." />
           </a>
-        </figure>
-        <figure class="overview-domains">
-          <a href="assets/corpus-domains.png" target="_blank" rel="noopener noreferrer" aria-label="Open the document domain distribution at full resolution">
-            <img src="assets/corpus-domains.png" width="2220" height="1020" loading="lazy" decoding="async" alt="Distribution of 201 documents across nine domains: academic paper 45, laws 38, research report 33, guidebook 20, tutorial/workshop 14, brochure 14, government 14, financial report 13, and administration/industry file 10." />
-          </a>
-          <figcaption>Domain distribution of the 201 documents. Slices show percentages; the legend reports document counts using the original MMDocIR domain labels.</figcaption>
+          <figcaption>Bottom-up question construction with controlled evidence topologies and counterfactual validation.</figcaption>
         </figure>
       </section>
 

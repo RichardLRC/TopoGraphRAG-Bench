@@ -36,11 +36,13 @@ h2 { margin: 0 0 22px; text-align: center; font-size: 30px; font-weight: 650; le
 .abstract p { margin: 0; color: #505968; text-align: left; }
 .small-caps { font-variant: small-caps; }
 .overview { border-top: 1px solid var(--line); }
+.construction { border-top: 1px solid var(--line); }
 .overview-copy { max-width: 850px; margin: 0 auto; color: #505968; }
 .overview-copy p { margin: 0 0 20px; }
 .overview-copy p:last-child { margin-bottom: 0; }
-.overview-statistics { max-width: 920px; margin: 32px auto 0; }
-.overview-domains { margin-top: 36px; }
+.overview-figures { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 24px; margin-top: 30px; }
+.overview-figures figure { min-width: 0; margin: 0; }
+.overview-figures figcaption { margin-top: 12px; font-size: 12px; }
 figure { margin: 30px 0 0; }
 figure img { display: block; width: 100%; height: auto; }
 figcaption { color: var(--muted); text-align: center; font-size: 13px; line-height: 1.7; margin-top: 20px; }
@@ -57,6 +59,9 @@ figcaption { color: var(--muted); text-align: center; font-size: 13px; line-heig
 .case-image-close:focus-visible { outline: 3px solid #9caddf; outline-offset: 3px; }
 footer a:hover { text-decoration: underline; }
 footer { border-top: 1px solid var(--line); padding: 24px; display: flex; justify-content: center; gap: 26px; flex-wrap: wrap; color: var(--muted); font-size: 12px; }
+@media (max-width: 760px) {
+  .overview-figures { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+}
 @media (max-width: 600px) {
   .hero { padding: 48px 18px 30px; }
   h1 { letter-spacing: -1.2px; }
