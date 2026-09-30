@@ -11,7 +11,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://richardlrc.github.io/TopoGraphRAG-Bench/" />
     <link rel="canonical" href="https://richardlrc.github.io/TopoGraphRAG-Bench/" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=inline-case-1" />
+    <script src="case-study.js?v=inline-case-1" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#abstract">Skip to content</a>
@@ -27,7 +28,7 @@
           <span class="resource-link unavailable" aria-disabled="true">Paper <small>Coming soon</small></span>
           <a class="resource-link" href="https://github.com/RichardLRC/TopoGraphRAG-Bench/" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
           <a class="resource-link" href="https://huggingface.co/datasets/diandianone123/topographrag-bench" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🤗</span> Dataset</a>
-          <a class="resource-link" href="https://richardlrc.github.io/TopoGraphRAG-CaseStudy/" target="_blank" rel="noopener noreferrer">Case Study <span aria-hidden="true">↗</span></a>
+          <a class="resource-link" href="#case-study">Case Study <span aria-hidden="true">↓</span></a>
         </nav>
       </header>
 
@@ -49,9 +50,22 @@
       <section class="section case-study" id="case-study" aria-labelledby="case-study-title">
         <h2 id="case-study-title">Case Study</h2>
         <p>Explore the highlighted source evidence, system responses, retrieved contexts, and step-level judge decisions in our interactive case study.</p>
-        <a class="case-link" href="https://richardlrc.github.io/TopoGraphRAG-CaseStudy/" target="_blank" rel="noopener noreferrer">View the case study <span aria-hidden="true">→</span></a>
+        <p class="case-loading" id="case-loading" role="status">Loading case study…</p>
+        <iframe
+          class="case-study-frame"
+          id="case-study-frame"
+          src="https://richardlrc.github.io/TopoGraphRAG-CaseStudy/"
+          title="TopoGraphRAG-Bench case study: source evidence, system responses, and per-hop judge records"
+          loading="lazy"
+          height="1100"
+        ></iframe>
       </section>
     </main>
+    <dialog class="case-image-dialog" id="case-image-dialog">
+      <button class="case-image-close" type="button" aria-label="Close enlarged evidence image">×</button>
+      <img alt="Enlarged source evidence" />
+      <p></p>
+    </dialog>
     <footer>
       <span>TopoGraphRAG-Bench</span>
       <a href="https://github.com/RichardLRC/TopoGraphRAG-Bench/" target="_blank" rel="noopener noreferrer">Code &amp; resources ↗</a>
