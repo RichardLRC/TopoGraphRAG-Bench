@@ -11,7 +11,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://richardlrc.github.io/TopoGraphRAG-Bench/" />
     <link rel="canonical" href="https://richardlrc.github.io/TopoGraphRAG-Bench/" />
-    <link rel="stylesheet" href="styles.css?v=construction-evaluation-1" />
+    <link rel="stylesheet" href="styles.css?v=highlights-1" />
     <script src="case-study.js?v=inline-case-1" defer></script>
   </head>
   <body>
@@ -44,6 +44,17 @@
       <section class="section abstract" id="abstract" aria-labelledby="abstract-title">
         <h2 id="abstract-title">Abstract</h2>
         <p>Real-world documents distribute evidence across text, tables, figures, captions, and page layouts. Answering complex questions over such documents therefore requires more than retrieving relevant passages: systems must recover the evidence topology that connects heterogeneous evidence units. Existing GraphRAG evaluations focus primarily on text-derived chunks, entities, and relations, while multimodal document RAG benchmarks evaluate cross-modal retrieval and generation without directly testing whether systems recover the intended reasoning structure. We introduce <span class="small-caps">TopoGraphRAG-Bench</span>, a layout-grounded benchmark for multimodal evidence reasoning in GraphRAG. The benchmark contains 2,024 questions over 201 long, visually rich documents, with evidence grounded in text, figures, and tables. Each instance is constructed bottom-up from layout-grounded evidence units and assigned one of three controlled topologies: single-hop retrieval, bridge-chain reasoning, or multi-source synthesis. To ensure that questions preserve their intended structure, we apply counterfactual validation for shortcut resistance, modality necessity, and evidence necessity. We evaluate text-only GraphRAG, page-level visual retrieval, and multimodal GraphRAG systems using retrieval, generation, and topology-aware reasoning metrics. Multimodal GraphRAG systems achieve the strongest overall performance, but still fail when visual-textual evidence alignment or multi-unit composition is incomplete. Text-only GraphRAG struggles when key dependencies are grounded in figures or tables, while page-level visual retrieval lacks the fine-grained structure needed for topology recovery. These results suggest that future GraphRAG systems must model not only textual entities and relations, but also layout structure, modality alignment, and the reasoning roles of evidence units.</p>
+      </section>
+
+      <section class="section highlights" id="highlights" aria-labelledby="highlights-title">
+        <h2 id="highlights-title"><span aria-hidden="true">🔥</span> Highlights</h2>
+        <div class="section-copy">
+          <ul class="highlights-list">
+            <li><strong>Topology-aware multimodal GraphRAG benchmark.</strong> We introduce TopoGraphRAG-Bench, a layout-grounded benchmark comprising 2,024 QA pairs over 201 long documents, covering single-hop retrieval, bridge-chain reasoning, and multi-source synthesis across text, figures, and tables.</li>
+            <li><strong>Bottom-up evidence-topology construction.</strong> We construct questions bottom-up from verifiable, layout-grounded evidence units rather than whole-document prompts, and apply counterfactual validation to assess shortcut resistance, modality necessity, and evidence necessity.</li>
+            <li><strong>Diagnostic evaluation of GraphRAG paradigms.</strong> We evaluate text-only GraphRAG, page-level visual retrieval, and multimodal GraphRAG systems, revealing persistent challenges in cross-modal alignment and fine-grained evidence-topology recovery.</li>
+          </ul>
+        </div>
       </section>
 
       <section class="section overview" id="overview" aria-labelledby="overview-title">

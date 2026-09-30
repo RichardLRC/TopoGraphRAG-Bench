@@ -38,6 +38,10 @@ h2 { margin: 0 0 22px; text-align: center; font-size: 30px; font-weight: 650; le
 .abstract { max-width: 850px; }
 .abstract p { margin: 0; color: #505968; text-align: left; }
 .small-caps { font-variant: small-caps; }
+.highlights { border-top: 1px solid var(--line); }
+.highlights-list { margin: 0; padding-left: 1.3em; }
+.highlights-list li + li { margin-top: 14px; }
+.highlights-list strong { color: var(--ink); }
 .overview { border-top: 1px solid var(--line); }
 .construction, .evaluation { border-top: 1px solid var(--line); }
 .section-copy { max-width: 850px; margin: 0 auto; color: #505968; }
