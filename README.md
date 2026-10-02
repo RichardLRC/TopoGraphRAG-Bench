@@ -180,7 +180,7 @@ post-hoc labels.
 ## Acknowledgements
 
 Source documents are derived from
-[MMDocIR](https://huggingface.co/datasets/MMDocIR/MMDocIR_Eval_Dataset).
+[MMDocIR]([https://huggingface.co/datasets/MMDocIR/MMDocIR_Eval_Dataset](https://huggingface.co/datasets/MMDocIR/MMDocRAG)).
 Layout parsing relies on MinerU + LayoutLMv3. The construction pipeline
 adapts ideas from MuSiQue (bottom-up compositional multi-hop), MIMG
 (multi-agent QA generation with score-based filtering), and DocHop-QA
